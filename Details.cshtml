@@ -1,0 +1,32 @@
+﻿@model HdfcBank.Models.DepositClass
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2> Fixed Deposit </h2>
+<div>
+    <p>
+        HDFC Bank offers multiple fixed deposit options to their customers to park their surplus savings for a fixed tenure.
+        A customer is required to make a deposit once into their FD account at the time of opening the account with the bank.
+        The customer is not allowed to deposit more money and withdraw any money in the account during the tenure of the deposit.
+        Fixed Deposits of HDFC Bank have a higher interest rate compared to their saving deposits.
+
+    <p>  Benefits of opening a FD account in HDFC Bank are</p>
+    <li> Convenience of booking deposit through netbanking</li>
+    <li>Nomination facility available</li>
+    <li> Earn higher returns on the money deposited</li>
+    <li> Avail sweep in and super saver facility on your deposit</li>
+    <li> Loan facility upto 90 per cent is available on the deposit</li>
+
+
+    @Html.ActionLink("Open Fixed Deposit", "Index", "Deposit", null, new { @class = "btn btn-primary", @style = "margin:1rem 0 1rem 1rem" })
+    @Html.ActionLink("Fixed Deposit Statement", "FdStatement", "Deposit", null, new { @class = "btn btn-primary", @style = "margin:1rem 0 1rem 1rem" })
+    @Html.ActionLink("Back to Welcome", "Welcome", "Login", new { id = @Session["customerid"] }, new
+    {
+        @class = "btn btn-primary",
+    @style = "margin:1rem 0 1rem 1rem"
+    });
+
+   
+</div>

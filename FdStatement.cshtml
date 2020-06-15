@@ -1,0 +1,96 @@
+﻿@model HdfcBank.Models.FdStatements
+
+@{
+    ViewBag.Title = "FdStatement";
+}
+
+<h2>Fixed Deposit Details</h2>
+
+<h4 style="color:green;">
+    From:@Session["Name"]-@Session["Accountno"]<br />
+    Balance:Rs @Session["Balance"]
+</h4>
+
+    <div>
+
+        <hr />
+        <dl class="dl-horizontal">
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Id)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Id)
+            </dd>
+
+
+            <dt>
+                @Html.DisplayNameFor(model => model.fddate)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.fddate)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.fdamount)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.fdamount)
+            </dd>
+
+            @*<dt>
+                @Html.DisplayNameFor(model => model.duration)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.duration)
+            </dd>*@
+
+            <dt>
+                @Html.DisplayNameFor(model => model.rateofinterset)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.rateofinterset)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.maturitydate)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.maturitydate)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.maturityamount)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.maturityamount)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.nominee)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.nominee)
+            </dd>
+
+        </dl>
+
+
+    </div>
+    <p>
+        @Html.ActionLink("Back to Fixed Deposit", "Details", "Deposit", new { id = @Session["customerid"] }, new { @class = "btn btn-primary", @style = "margin:1rem 0 1rem 1rem" })
+        @Html.ActionLink("Back to Welcome", "Welcome", "Login", new { id = @Session["customerid"] }, new
+        {
+            @class = "btn btn-primary",
+    @style = "margin:1rem 0 1rem 1rem"
+        });
+
+    </p>
